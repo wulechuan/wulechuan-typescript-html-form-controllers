@@ -1,0 +1,14 @@
+.DS_Store
+.circleci
+.vs
+.vscode
+node_modules
+/demos
+/documents
+/gulp*
+/temp/**/*
+.markdown*
+.eslint*
+ReadMe*.html
+git*.sh
+tsconfig*

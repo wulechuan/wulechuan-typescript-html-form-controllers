@@ -1,0 +1,7 @@
+.DS_Store
+.vs/**/*
+node_modules
+/ReadMe.*.html
+/ReadMe.html
+/documents/**/*.html
+temp/
