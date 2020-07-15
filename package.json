@@ -1,6 +1,6 @@
 {
     "name": "@wulechuan/html-form-controllers",
-    "version": "0.0.2-alpha",
+    "version": "0.0.1-alpha",
     "author": "wulechuan <wulechuan@live.com>",
     "description": "吴乐川的网页表单（form）通用控制器。",
     "license": "WTFPL",
