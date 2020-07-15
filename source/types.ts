@@ -6,12 +6,10 @@
 // );
 export type FormControlCSSClassNamesConfig = string[]; // 此处妥协采用数组，是为了便于合并多个 FormControlCSSClassNamesConfig 。
 
-export type FormSingleMessage<_ViewComponentTypicalRootClass = (this: {}) => void> = (
-    | null
-    | string
-    | HTMLElement
-    | _ViewComponentTypicalRootClass // 举例： _ViewComponentTypicalRootClass=Vue 或 _ViewComponentTypicalRootClass=ReactDOM
-);
+export type FormSingleMessage<_ViewComponentTypicalRootClass = (this: {}) => void> = {
+    uid:        string; // 该所谓唯一标识便于 Vuejs 等框架批量构建、精确控制显示消息的视图组件（View Component）。
+    theMessage: null | string | HTMLElement | _ViewComponentTypicalRootClass; // 举例： _ViewComponentTypicalRootClass=Vue 或 _ViewComponentTypicalRootClass=ReactDOM
+};
 
 
 
