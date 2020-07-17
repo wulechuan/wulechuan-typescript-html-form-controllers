@@ -1,18 +1,19 @@
 {
     "name": "@wulechuan/html-form-controllers",
-    "version": "0.0.1-alpha",
+    "version": "0.0.1-alpha2",
     "author": "wulechuan <wulechuan@live.com>",
     "description": "吴乐川的网页表单（form）通用控制器。",
     "license": "WTFPL",
     "main": "source/generators.ts",
     "scripts": {
-        "remove-all-html-docs": "rimraf  ./ReadMe*.html  ./documents/**/*.html",
+        "remove-all-html-docs": "rimraf  ./ReadMe.html  ./documents/**/*.html",
         "generate-html-docs": "npm  run  remove-all-html-docs    &&    wlc-md-to-html  -i ./*.md,./documents/**/*.md  -E3  -C ./documents/wlc-md-to-html.config.js  --to '*'",
         "_lint:source": "eslint  --fix  ./source/**/*.ts  ./tsconfig.js",
-        "lint": "npm  run  _lint:source",
-        "dist": "npm  run  lint",
-        "before-git-commit": "npm  i    &&    npm  run  dist",
-        "prepublishOnly": "npm                     run  dist"
+        "lint": "npm   run  _lint:source",
+        "dist": "npm   run   lint",
+        "start": "npm  run   lint",
+        "before-git-commit": "npm  i                &&    npm  start",
+        "prepublishOnly": "rimraf  ./ReadMe.html    &&    npm  start"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^2.24.0",
